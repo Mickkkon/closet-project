@@ -1,0 +1,68 @@
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height:100vh;
+    background-color: rgb(216, 145, 14, .1);
+  }
+  
+  .card {
+    width: 300px;
+    height: 400px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+  }
+  .card:hover {
+      background-color: rgba(242, 242, 242, .1);
+  }
+  
+  .card:active {
+    background-color: rgba(0, 0, 0, .3)
+  }
+  
+  .card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .casual {
+    background-color: #e1d5b2;
+  }
+  
+  .formal {
+    background-color: #b2c3e1;
+  }
+  
+  .sports {
+    background-color: #b2e1d5;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .card {
+      width: 90%;
+      height: 300px;
+    }
+    
+    .card img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
