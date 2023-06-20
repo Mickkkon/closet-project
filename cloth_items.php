@@ -184,6 +184,6 @@ mysqli_close($conn);
  
  
  
-<script defer src="./js/add_clothing.js"></script>
+<script src="./js/add_clothing.js"></script>
 </body>
 </html>
