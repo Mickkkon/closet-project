@@ -24,6 +24,8 @@ body {
             border-bottom: 5px solid silver;
 
 }
+
+
 .navbar .logo {
     position: absolute;
     top: 15px;
@@ -32,9 +34,11 @@ body {
     font-size: 30px;
     font-weight: 700;
 }
+
 a {
     text-decoration: none;
 }
+
 
 .nav-items {
 
@@ -60,18 +64,36 @@ a {
  
 }
 ul li {
+
     font-weight: 700;
     color:rgb(3, 108, 64);
-    
-    
     padding: 5px 10px;
     border-radius: 5px;
+    border-bottom: 2px solid rgba(0, 255, 68, 0.5);
 }
 
 ul li:hover {
+
     color: wheat;
-    
     padding: 5px 10px;
     border-radius: 5px;
     background-color: green;
 }
+
+
+/* for the states of navbar links */
+
+
+.navbar .nav-items ul a:active {
+    background-color: #ff0000;  
+    color: #fff;  
+  }
+  
+
+  .navbar .nav-items ul li:visited {
+    background-color: #ff0000; /* Set your desired background color here */
+    color: #fff; /* Set your desired text color here */
+  }
+
+  
+  

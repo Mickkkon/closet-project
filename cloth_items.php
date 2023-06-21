@@ -98,6 +98,13 @@ include 'dbconfig.php';
 }
 ?>
 
+<h1>there things we neec to add, changes we need ot make
+   here and now. whenever each links
+  is clicked, the remaining links background reset to 
+  default. otherwise the active link's
+background color remains activated and conspiquous. that can be achieved by using 
+the different states of links using css and pseudo classes if not using javascript</h1>
+
 <div class="form-wrapper">
 
        

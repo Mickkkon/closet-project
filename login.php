@@ -19,6 +19,10 @@ if(isset($_SESSION["username"])){
     <title>Login</title>
     <link rel="stylesheet" href="./css/nav-include.css">
 	<link rel="stylesheet" href="./css/login_styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
  
 
 </head>
@@ -27,68 +31,10 @@ if(isset($_SESSION["username"])){
 
 <?php include './includes/nav-include.php'; ?>
 
-<?php
-
-
-if(isset($_POST["login"])){
-    // get values
-
-    $uname = $_POST["username"];
-    $pass = $_POST["password"];
-
-// create database connection
-
-include 'dbconfig.php';
-
-// sql statement
-
-$sql = "select * from users where (uname = '$uname' and pass = '$pass')";
-
-$res = mysqli_query($conn, $sql);
-
-if(mysqli_num_rows($res) > 0 ){
-
-  // Successful login
-  $_SESSION["username"] = $uname;
-  header("Location: explore.php");
-  exit();
-
-} else {
-
-
-    echo "wrong Credentials";
-
-
-}
-
-
-}
 
 
 
-?>
-
-<div class="login-wrapper">
-
-<form method="POST">
-
-<h2>Login</h2>
-
-	<label for="username">Username:</label>
-	<input type="text" id="username" name="username" required>
-
-
-	<label for="password">Password:</label>
-	<input type="password" id="password" name="password" required>
-	
-	<input type="submit" name="login" value="Login">
-	<input type="reset" value="Clear All">
-
-</form>
-
-	<a href="register.php"><button>Register</button></a>
-
-</div>
+<script src="./js/login.js"></script>
 
 </body>
 </html>

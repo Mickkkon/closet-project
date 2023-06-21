@@ -1,10 +1,10 @@
 <?php
 session_start();
-
 if(!isset($_SESSION["username"])){
-  header("Location: login.php");
+  header("Location: index.php");
 }
 
+ 
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ if(!isset($_SESSION["username"])){
     <link rel="stylesheet" href="./css/nav-include.css">
     <link rel="stylesheet" href="./css/explore_styles.css">
 
-  
+    
 </head>
 <body>
 
@@ -27,8 +27,6 @@ if(!isset($_SESSION["username"])){
 
 $logged =  $_SESSION["username"];
  
- 
-
 ?>
 
 <h2 style="
@@ -61,24 +59,12 @@ $logged =  $_SESSION["username"];
     <p>Stay comfortable and stylish during your workout</p>
   </div>
  </a>
+
+
+
   
  
-
-  <script>
-
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    // Do something when the card is clicked
-
-
-  });
-});
-
-
-  </script>
- 
+ <script src="./js/explore-page.js"></script>
  
     
 </body>
